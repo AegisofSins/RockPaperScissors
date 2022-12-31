@@ -4,9 +4,8 @@
 // if playerSelection = Rock && compSelection = Paper then return alert('You won') else alert('you lost')
 
 const gameArray = ['ROCK', 'PAPER', 'SCISSORS'];
-let compChoice = compSel();
-let playerChoice = playerSel();
-let result = playRound();
+let playerChoice;
+let compChoice;
 
 //Computer Selection that is random using the above declared array ///////////////////////////////////////////////
 
@@ -19,7 +18,7 @@ function compSel() {  //Generates random output for computer between Rock, Paper
 //Player Selection using a prompt and assigning it to a variable //////////////////////////////////////////////////
 
 function playerSel () {
-    let playerChoice = prompt('Choose Rock, Paper, or Scissors').toUpperCase(); //Log players choice in Uppercase 
+    playerChoice = prompt('Choose Rock, Paper, or Scissors').toUpperCase(); //Log players choice in Uppercase 
     if (playerChoice == 'ROCK' || playerChoice == 'PAPER' || playerChoice == 'SCISSORS' ) { //Verifies that user entry is True
     }
     else {
