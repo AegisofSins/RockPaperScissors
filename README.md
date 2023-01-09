@@ -1,10 +1,11 @@
-# Choose your destiny
+<h1>**Choose your destiny**</h1>
 
-A short description about the project and/or client.
+A simple game follwing the classic rules of Rock Paper Scissors but with a mountain/climbing twist that climbers or outdoors people might enjoy. 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+The setup is quite simple since it uses a simple HTML page. No 'setup' is required other than running the index.html file using the following link:
+
 
 ### Prerequisites
 
