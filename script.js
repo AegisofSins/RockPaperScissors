@@ -6,21 +6,41 @@
 // const gameArray = ['ROCK', 'PAPER', 'SCISSORS'];
 
 
-//Computer Selection that is random using the above declared array ///////////////////////////////////////////////
+//Computer Selection that is random using the above declared array 
 playRound();
 
-function compSel() {  //Generates random output for computer between Rock, Paper, and Scissor
-    const gameArray = ['ROCK', 'PAPER', 'SCISSORS'];
+//Program that compares both input and returns the winner 
+function playRound() {
+    compSel();
+    playerSel();
+    
+    if (compChoice === playerChoice){
+        alert ('Tie!')
+        }
+    else if (compChoice == 'CAM' && playerChoice == 'MONKEY FIST' || 
+            compChoice == 'NUT' && playerChoice == 'CAM' || 
+            compChoice == 'MONKEY FIST' && playerChoice == 'NUT') {
+                alert ('You decked! There goes your pride.');
+                console.log('Computer won');
+            }
+    else {
+        alert ('The pro catches your fall. There goes your flash.');
+        console.log('You won');
+    }
+}
+
+//Generates random output for computer between Cam, Nut, and Monkey Fist
+function compSel() {  
+    const gameArray = ['CAM', 'NUT', 'MONKEY FIST'];
     let $ = Math.floor(Math.random()*gameArray.length);
     console.log(gameArray[$]); 
     return compChoice = gameArray[$]; 
 }
 
-//Player Selection using a prompt and assigning it to a variable //////////////////////////////////////////////////
-
+//Player Selection using a prompt and assigning it to a variable 
 function playerSel () {
-    playerChoice = prompt('Choose Rock, Paper, or Scissors').toUpperCase(); //Log players choice in Uppercase 
-    if (playerChoice == 'ROCK' || playerChoice == 'PAPER' || playerChoice == 'SCISSORS' ) { //Verifies that user entry is True
+    playerChoice = //Log players choice in Uppercase 
+    if (playerChoice == 'CAM' || playerChoice == 'NUT' || playerChoice == 'MONKEY FIST' ) { //Verifies that user entry is True
         console.log(playerChoice);
         return playerChoice;
     }
@@ -30,27 +50,3 @@ function playerSel () {
     }
     
 } 
-
-//Program that compares both input and returns the winner 
-
-function playRound() {
-    for (let i=1; i<=5; i++){
-    compSel();
-    playerSel();
-    console.log(i)
-    if (compChoice === playerChoice){
-        alert ('Tie!')
-    console.log('Tie') }
-    else if (compChoice == 'ROCK' && playerChoice == 'SCISSORS' || 
-            compChoice == 'PAPER' && playerChoice == 'ROCK' || 
-            compChoice == 'SCISSORS' && playerChoice == 'PAPER') {
-                alert ('Computer won');
-                console.log('Computer won');
-            }
-    else {
-        alert ('You won!');
-        console.log('You won');
-    }}
-}
-
-        
