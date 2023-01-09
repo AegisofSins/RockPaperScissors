@@ -5,6 +5,7 @@ A simple game follwing the classic rules of Rock Paper Scissors but with a mount
 ## Getting Started
 
 The setup is quite simple since it uses a simple HTML page. No 'setup' is required other than running the index.html file using the following link:
+https://rawgit.com/AegisofSins/RockPaperScissors/main/index.html
 
 
 ### Prerequisites
