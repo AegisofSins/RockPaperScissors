@@ -22,13 +22,7 @@ Run [index.html](https://rawgit.com/AegisofSins/RockPaperScissors/main/index.htm
 
 ## Usage
 
-A few examples of useful commands and/or tasks.
 
-```
-$ First example
-$ Second example
-$ And keep this in mind
-```
 
 
 ## Additional Documentation and Acknowledgments
