@@ -17,7 +17,7 @@ None required.
 A simple index.html page to run.
 
 ```
-$ Run index.html
+$ Run [index.html](https://rawgit.com/AegisofSins/RockPaperScissors/main/index.html)
 ```
 
 ## Usage
