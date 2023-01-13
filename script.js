@@ -10,9 +10,11 @@ const monkey = document.querySelector('.monkey');
 const nut = document.querySelector('.nut');
 const play = document.querySelector('.play');
 const total = document.querySelector('.total');
+
 let count = 0;
 
 play.addEventListener('click', playRound);
+
 //Associates the players click on the img with an index of the gameArray
 cam.addEventListener('click', () => {
     cam.classList.toggle('imgHover');
@@ -41,17 +43,15 @@ function playRound() {
     compSel();
     
     if (compChoice === playerChoice){
-        alert ('You flashed your project!')
+        alert ('You flashed your project! without falling!')
     }
     else if (compChoice == 'CAM' && playerChoice == 'MONKEY FIST' || 
     compChoice == 'NUT' && playerChoice == 'CAM' || 
     compChoice == 'MONKEY FIST' && playerChoice == 'NUT') {
         alert ('You decked! There goes your pride.');
-        console.log('Computer won');
     }
     else {
-        alert ('The pro catches your fall but there goes your flash.');
-        console.log('You won');
+        alert ('The pro catches your fall but there goes your flash.');  
     }
     updateCount();
     cam.classList.remove('imgHover');
@@ -62,6 +62,6 @@ function playRound() {
 //Updates the total amount of rounds and updates the HTML text
 function updateCount(){
     count ++
-    total.textContent = 'Total Rounds: ' + count;
+    total.textContent = 'Total Rounds: ${count}';
 }
 
