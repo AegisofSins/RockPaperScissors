@@ -14,6 +14,12 @@ body {
     border-radius: 1.25rem;
 
 }
+
+.mainSection > h2 {
+    text-align: center;
+    block-size: min-content;
+    margin-top: 20px;
+}
 .mainContent {
     display: flex;
     flex-direction: row;
@@ -31,6 +37,13 @@ body {
 }
 
 .mainContent > img:hover {
+    transform: scale(1.2,1.2);
+    background-color: #eee;
+    border: 2px solid blue;
+    border-radius: 1.25rem;
+    margin: 9px;
+}
+.imgHover {
     transform: scale(1.2,1.2);
     background-color: #eee;
     border: 2px solid blue;

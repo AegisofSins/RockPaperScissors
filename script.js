@@ -12,18 +12,29 @@ const play = document.querySelector('.play');
 const total = document.querySelector('.total');
 let count = 0;
 
-
 play.addEventListener('click', playRound);
-cam.addEventListener('click', playerSelCam);
-nut.addEventListener('click', playerSelNut);
-monkey.addEventListener('click', playerSelMonkey);
+//Associates the players click on the img with an index of the gameArray
+cam.addEventListener('click', () => {
+    cam.classList.toggle('imgHover');
+    playerChoice = gameArray[0];
+    return playerChoice;
+})
+nut.addEventListener('click', () => {
+    nut.classList.toggle('imgHover');
+    playerChoice = gameArray[1];
+    return playerChoice;
+})
+monkey.addEventListener('click', () => {
+    monkey.classList.toggle('imgHover');
+    playerChoice = gameArray[2];
+    return playerChoice;
+})
 
-
-function updateCount(){
-    count ++
-    total.textContent = 'Total Rounds: ' + count;
+//Generates random output for computer between Cam, Nut, and Monkey Fist
+function compSel() {  
+    let index = Math.floor(Math.random()*gameArray.length);
+    return compChoice = gameArray[index]; 
 }
-
 
 //Program that compares both input and returns the winner 
 function playRound() {
@@ -33,8 +44,8 @@ function playRound() {
         alert ('You flashed your project!')
     }
     else if (compChoice == 'CAM' && playerChoice == 'MONKEY FIST' || 
-            compChoice == 'NUT' && playerChoice == 'CAM' || 
-            compChoice == 'MONKEY FIST' && playerChoice == 'NUT') {
+    compChoice == 'NUT' && playerChoice == 'CAM' || 
+    compChoice == 'MONKEY FIST' && playerChoice == 'NUT') {
         alert ('You decked! There goes your pride.');
         console.log('Computer won');
     }
@@ -43,24 +54,14 @@ function playRound() {
         console.log('You won');
     }
     updateCount();
+    cam.classList.remove('imgHover');
+    nut.classList.remove('imgHover');
+    monkey.classList.remove('imgHover');
 }
 
-//Generates random output for computer between Cam, Nut, and Monkey Fist
-function compSel() {  
-    let $ = Math.floor(Math.random()*gameArray.length);
-    console.log(gameArray[$]); 
-    return compChoice = gameArray[$]; 
+//Updates the total amount of rounds and updates the HTML text
+function updateCount(){
+    count ++
+    total.textContent = 'Total Rounds: ' + count;
 }
-//Associates the players click on the img with an index of the gameArray 
-function playerSelCam () {
-    playerChoice = gameArray[0];
-    return playerChoice;
-}
-function playerSelNut () {
-    playerChoice = gameArray[1];
-    return playerChoice;
-}
-function playerSelMonkey () {
-    playerChoice = gameArray[2];
-    return playerChoice;
-}
+
